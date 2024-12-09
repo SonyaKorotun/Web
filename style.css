@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin-left: 100px;
+    padding: 20px;
+}
+
+header {
+    width: 80%;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#search_input {
+    flex-grow: 1; 
+    margin-right: 20px; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 25px;
+}
+
+body {
+    display: flex;
+}
+
+header {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+#search-input {
+    flex-grow: 1; 
+    margin-right: 20px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+.menu-container {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin: 20px; 
+    flex-direction: wrap;
+}
+
+.menu {
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer; 
+}
+
+.menu-item:hover {
+    background-color: #dac6b6;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px; 
+    cursor: pointer; 
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#search-input {
+    flex-grow: 1;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+main{
+    width: 80%;
+}
+
+
+.coffee-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 300px;
+}
+
+.cappuccino {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.coffee-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.coffee-name {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+    flex-grow: 0;
+}
+
+.coffee-price {
+    font-size: 1em;
+    margin: 5px 0;
+    flex-grow: 0;
+}
+
+.coffee-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color:#CD4126;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width:20px;
+    height:20px;
+}
+
+.coffee-button:hover {
+    background-color: #CD4126;/* Цвет при наведении */
+}
+
+.sub-menu {
+    display: none; /* Скрываем подменю по умолчанию */
+    position: absolute; /* Позиционируем подменю */
+    background-color: white; /* Фон подменю */
+    border: 1px solid #ccc; /* Граница подменю */
+    margin-top: 5px; /* Отступ сверху */
+    padding: 10px; /* Отступ внутри */
+    z-index: 1000; /* Устанавливаем порядок отображения */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    position: relative;
+}
+
+
+.menu-item:hover .sub-menu {
+    display: block;
+}
