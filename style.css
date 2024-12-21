@@ -1,186 +1,605 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin-left: 100px;
-    padding: 20px;
+*{
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
 }
 
-header {
-    width: 80%;
-    align-items: center;
-    box-sizing: border-box;
+body{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    background: rgb(236, 236, 236);
 }
-
-#search_input {
-    flex-grow: 1; 
-    margin-right: 20px; 
-    padding: 20px; 
-    border: 1px solid #ccc; 
-    border-radius: 25px;
+footer{
+    height: 50px;
 }
-
-body {
-    display: flex;
-}
-
-header {
-    width: 100%; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
-    padding: 10px; 
-    box-sizing: border-box; 
-}
-
-#search-input {
-    flex-grow: 1; 
-    margin-right: 20px; 
-    padding: 10px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-}
-
-.menu-container {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    margin: 20px; 
-    flex-direction: wrap;
-}
-
-.menu {
-    border: 1px solid #ccc; 
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.menu-item {
-    padding: 10px;
-    cursor: pointer; 
-}
-
-.menu-item:hover {
-    background-color: #dac6b6;
-}
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-button {
-    margin: 5px;
-    padding: 5px 10px; 
-    cursor: pointer; 
-}
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-#search-input {
-    flex-grow: 1;
-    margin-right: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 main{
-    width: 80%;
+    background: rgb(236, 236, 236);
+    opacity: 1;
 }
 
-
-.coffee-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px;
+/*Навигационная панель*/
+nav{
     width: 200px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: rgb(236, 236, 236);
+    opacity: 1;
+}
+.navigator{
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    height: 300px;
+    margin-top: 60px;
+    margin-left: 80px;
+    width: 150px;
 }
-
-.cappuccino {
+.navigatinPanel{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
-.coffee-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover; 
-    border-radius: 5px;
+.but_up{
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.but_up:hover{
+    background: rgb(240, 240, 240);
+    border: 2px solid black;
+}
+.but_down{
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.but_down:hover{
+    background: rgb(240, 240, 240);
+    border: 2px solid black;
+}
+.but_but{
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.but_but:hover{
+    background: #AC8F64;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+/*.but_but:active{
+    background: #AC8F64;
+    border-radius: 10px;
+    border: 2px solid black;
+}*/
+
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    background: rgb(236, 236, 236);
+    opacity: 1;
 }
 
-.coffee-name {
-    font-size: 1.2em;
-    margin: 10px 0 5px;
-    flex-grow: 0;
+#boxCoffee{
+    display: flex;
+    flex-direction: column;
 }
 
-.coffee-price {
-    font-size: 1em;
-    margin: 5px 0;
-    flex-grow: 0;
+.input-with-icon{
+    width: 690px;
+    height: 80px;
+    border-radius: 30px;
+    margin-top: 60px;
+    margin-left: 80px;
+    background: rgb(196, 196, 196);
+    font-size: 30px;
+    color: gray;
+    padding-left: 40px;
+    border: rgb(196, 196, 196);;
 }
 
-.coffee-button {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color:#CD4126;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    width:20px;
-    height:20px;
-}
-
-.coffee-button:hover {
-    background-color: #CD4126;/* Цвет при наведении */
-}
-
-.sub-menu {
-    display: none; /* Скрываем подменю по умолчанию */
-    position: absolute; /* Позиционируем подменю */
-    background-color: white; /* Фон подменю */
-    border: 1px solid #ccc; /* Граница подменю */
-    margin-top: 5px; /* Отступ сверху */
-    padding: 10px; /* Отступ внутри */
-    z-index: 1000; /* Устанавливаем порядок отображения */
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.menu-item {
+.OrderStatus{
+    margin-top: 47px;
+    margin-left: 80px;
+    display: inline-block; /**/
     position: relative;
 }
+.OrderStatusVector{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #AC8F64;
+}
+.OrderStatusVector img{
+    width: 48px;
+    height: 38px;
+    margin-top: 35px;
+    margin-left: 30px;
+    border-radius: 90px;
+    position: relative;
+    z-index: 100;
+}
+.OS{ /*Order Status*/
+    color: black;
+    text-decoration: none;
+    width: 200px;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-right: 50px;
+    position: absolute; top: 20%; left: 176%; transform: translate(-50%, -50%); /**/
+}
+.OS:hover{
+    color: rgb(255, 86, 86);
+}
+.countOrder{ /*Кол-во заказов*/
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 86, 86);
+    color: black;
+    margin-top: 30px;
+    position: absolute; top: 20%; left: 255%; transform: translate(-50%, -50%);
+    border-radius: 50%;
+    text-align: center;
+}
+.countOrder p{
+    font-size: 25px;
+    margin-top: 11px;
+}
+
+#productName{
+    width: 100px;
+}
+
+.op{
+    width: 1000px;
+}
+
+.more_card_coffe{
+    display: flex;
+    flex-direction: row;
+}
 
 
-.menu-item:hover .sub-menu {
+
+.cardCoffee{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-left: 80px;
+    padding: 10px 0px 10px;
+    width: 330px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 20px 1px;
+}
+.cardCoffee:hover{
+    border: 3px solid rgb(182, 159, 96);
+}
+
+.cardCoffee img{
+    width: 309px;
+    height: 309px;
+    border-radius: 20px;
+}
+
+.cardCoffee p{
+    margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+.addCof{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+    height: 35px;
+    margin-top: 50px;
+    background: rgb(209, 209, 209);
+    border-radius: 10px;
+    margin-left: 100px;
+}
+.addCof p{
+    font-size: 20px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+}
+.addCof button{
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: rgb(255, 86, 86);
+    border: 1px solid rgb(255, 86, 86);
+    font-size: 25px;
+}
+.addCof button:hover{
+    background: rgb(206, 189, 143);
+    border: 1px solid rgb(206, 189, 143);
+}
+
+
+.update{
+    display: flex;
+    width: 500px;
+    height: 965px;
+    position: fixed;
+    top: 0%;
+    left: 68.5%;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(209, 209, 209);
+    box-shadow: 0px 0px 20px 5px;
+}
+.update_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.mainOreder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#exithide{
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+}
+#exithide:hover{
+    color: #AC8F64;
+}
+.close{
+    display: none;
+}
+.open{
     display: block;
 }
+.Ordered_Kitchen{
+    display: flex;
+    flex-direction: column;
+}
+.Ordered_Kitchen p{
+    font-size: 20px;
+    margin-left: 30px;
+}
+.SavedOrder{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.CoffeYourOrder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    box-shadow: 0px 3px 5px 3px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 30px;
+}
+.CoffeYourOrder img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+    z-index: 10;
+}
+.prco{
+    margin-top: 12px;
+}
+.countisto{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    background: rgb(255, 86, 86);
+    width: 40px;
+    margin-right: 10px;
+}
+.countisto p{
+    margin-left: 15px;
+    margin-top: 7px;
+}
+.FinalPriceFromOrder{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 95%;
+    left: 75%;
+    transform: translate(-40%, -50%);
+}
+.FinalPriceFromOrder p{
+    font-size: 30px;
+}
+.total{
+    margin-right: 30px;
+}
+
+
+@media screen and (max-width:1441px){
+    .cardCoffee{
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+    .input-with-icon{
+        width: 670px;
+        margin-left: 40px;
+    }
+    .OrderStatus{
+        margin-left: 45px;
+    }
+    .update{
+        width: 450px;
+        height: 965px;
+        top: 0%;
+        left: 68.5%;
+    }
+}
+@media screen and (max-width:769px){
+    nav{
+        width: 0px;
+    }
+    .Selection{
+        margin-left: 75px;
+    }
+    .input-with-icon{
+        height: 40px;
+        margin-left: 10px;
+        margin-top: 80px;
+        width: 270px;
+        font-size: 16px;
+    }
+    .cardCoffee{
+        width: 170px;
+        height: 240px;
+        margin-left: 10px;
+    }
+    .cardCoffee p{
+        font-size: 16px;
+    }
+    .cardCoffee img{
+        width: 170px;
+        height: 170px;
+    }
+    .addCof{
+        width: 70px;
+        height: 25px;
+        margin-top: 0;
+        margin-left: 45px;
+    }
+    .addCof button{
+        width: 70px;
+        height: 25px;
+        color: rgb(255, 86, 86);
+    }
+    .addCof button:hover{
+        color: rgb(206, 189, 143);
+    }
+    .addCof p{
+        font-size: 16px;
+        margin-right: 5px;
+        margin-bottom: 20px;
+    }
+
+    .OrderStatus{
+        margin-top: 55px;
+        margin-left: 30px;
+    }
+    .OrderStatusVector{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #AC8F64;
+    }
+    .OrderStatusVector img{
+        width: 38px;
+        height: 33px;
+        margin-top: 30px;
+        margin-left: 27px;
+        border-radius: 90px;
+    }
+    .OS{ /*Order Status*/
+        color: black;
+        text-decoration: none;
+        width: 200px;
+        margin-top: 30px;
+        font-size: 16px;
+        margin-right: 50px;
+        position: absolute; top: 18%; left: 196%; transform: translate(-50%, -50%); /**/
+    }
+    .OS:hover{
+        color: #AC8F64;
+    }
+    .countOrder{ /*Кол-во заказов*/
+        width: 40px;
+        height: 40px;
+        background: rgb(255, 86, 86);
+        color: black;
+        margin-top: 30px;
+        position: absolute; top: 18%; left: 235%; transform: translate(-50%, -50%);
+        border-radius: 50%;
+        text-align: center;
+    }
+    .countOrder p{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* Бургер меню*/
+    .menu{
+        width: 100px;
+        height: 195px;
+        position: fixed;
+        top: 43%;
+        left: 60.5%;
+        transform: translate(-40%, -50%);
+        background: rgb(255, 255, 255);
+        box-shadow: 0px 0px 20px 5px;
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+    }
+    .viborka{
+        display: flex;
+        flex-direction: column;
+        width: 90px;
+        height: 150px;
+        margin-top: 11px;
+        margin-left: 5px;
+        gap: 5px;
+    }
+    .viborka button{
+        border-radius: 20px;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 255, 255);
+        
+    }
+    .viborka button:hover{
+        background: #AC8F64;
+        border: 1px solid #AC8F64;
+    }
+    .closeM{
+        display: none;
+    }
+    .openM{
+        display: block;
+    }
+
+    .update{
+        width: 400px;
+        height: 965px;
+        top: 0%;
+        left: 48.5%;
+    }
+    .FinalPriceFromOrder{
+        top: 95%;
+        left: 60%;
+    }
+}
+@media screen and (max-width: 381px){
+    nav{
+        width: 0;
+    }
+    .Selection{
+        margin-left: 40px;
+    }
+    .more_card_coffe{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-with-icon{
+        display: none;
+    }
+    .cardCoffee{
+        width: 270px;
+        height: 370px;
+        margin-left: 0px;
+    }
+    .cardCoffee p{
+        font-size: 25px;
+    }
+    .cardCoffee img{
+        width: 270px;
+        height: 270px;
+    }
+    .addCof{
+        width: 100px;
+        height: 40px;
+        margin-top: 0;
+        margin-left: 80px;
+    }
+    .addCof button{
+        width: 100px;
+        height: 40px;
+        color: black;
+    }
+    .addCof button:hover{
+        color: #AC8F64;
+    }
+    .addCof p{
+        font-size: 16px;
+        margin-right: 5px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .menu{
+        width: 100px;
+        height: 195px;
+        position: fixed;
+        top: 43%;
+        left: 28%;
+        transform: translate(-40%, -50%);
+        background: rgb(255, 255, 255);
+        box-shadow: 0px 0px 20px 5px;
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+    }
+    .viborka{
+        display: flex;
+        flex-direction: column;
+        width: 90px;
+        height: 150px;
+        margin-top: 11px;
+        margin-left: 5px;
+        gap: 5px;
+    }
+    .viborka button{
+        border-radius: 20px;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 255, 255);
+        
+    }
+    .viborka button:hover{
+        background: #AC8F64;
+        border: 1px solid #AC8F64;
+    }
+    .closeM{
+        display: none;
+    }
+    .openM{
+        display: block;
+    }
+
+    .update{
+        width: 385px;
+        height: 965px;
+        top: 0%;
+        left: 0%;
+    }
+    .FinalPriceFromOrder{
+        top: 95%;
+        left: 30%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

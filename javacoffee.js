@@ -8,6 +8,7 @@ const but_buy_price = document.querySelector('.but_buy_price'); // Кнопка 
 const textCoffeeOglavlenie = document.querySelector('.textCoffeeOglavlenie'); // Добавление названия кофе и описания
 const couCof = document.querySelector(".countOrder"); // Кол-во заказаных кофе
 
+
 let listOrder = [];
 
 !localStorage.listOrder ? listOrder = [] : listOrder = JSON.parse(localStorage.getItem('listOrder')); 
@@ -107,21 +108,23 @@ const priceDopss = [
 ]
 const realPriceDopss = [
   [
+    0,
     50,
-    60,
-    70,
+    80,
     100
   ],
   [
-    200,
-    250
+    20,
+    60
   ],
   [
-    300,
-    400,
-    500
+    70,
+    80,
+    90
   ]
 ]
+
+//отображение всех доступных опций для выбора кофе, добавок и типов молока.
 const showAllViborOrder = () => {
   let s1 = ""; let s2 = ""; let s3 = "";
   let i = 0;
@@ -149,74 +152,133 @@ const showAllViborOrder = () => {
   milkTypeCoffee.innerHTML = s3;
 
 }
-// Добавки
+
 const doppsCoffee = (siz, j, i) => {
   // Когда нажимаем добавить/отменить
   let k = 0;
-    colorDopss[j].forEach(element => {
-      if (k == i){
-        if (priceDopss[j][k] == realPriceDopss[j][k] || colorDopss[j][k] == "#AC8F64"){ // Отменяем если уже выбрано
-          colorDopss[j][k] = "rgb(255, 255, 255)";
-          priceDopss[j][k] = 0;
-          if (j == 0){
-            PikcherOnCofeSizeWhite[j][k] = "images/Pikcher.jpg";
-          }
-        }
-        else{
-          colorDopss[j][k] = "#AC8F64";
-          priceDopss[j][k] = realPriceDopss[j][k];
-          if (j == 0){
-            PikcherOnCofeSizeWhite[j][k] = PikcherOnCofeSizeBlack[j][k];
-          }
-
-        }
-      }
-      else{
+  colorDopss[j].forEach(element => {
+    if (k == i) {
+      if (priceDopss[j][k] == realPriceDopss[j][k] || colorDopss[j][k] == "#AC8F64") { // Отменяем если уже выбрано
         colorDopss[j][k] = "rgb(255, 255, 255)";
         priceDopss[j][k] = 0;
-        if (j == 0){
+        if (j == 0) {
           PikcherOnCofeSizeWhite[j][k] = "images/Pikcher.jpg";
         }
+      } else {
+        colorDopss[j][k] = "#AC8F64";
+        priceDopss[j][k] = realPriceDopss[j][k];
+        if (j == 0) {
+          PikcherOnCofeSizeWhite[j][k] = PikcherOnCofeSizeBlack[j][k];
+        }
       }
-      k++;
-    })
-    showAllViborOrder();
+    } else {
+      colorDopss[j][k] = "rgb(255, 255, 255)";
+      priceDopss[j][k] = 0;
+      if (j == 0) {
+        PikcherOnCofeSizeWhite[j][k] = "images/Pikcher.jpg";
+      }
+    }
+    k++;
+  });
+  showAllViborOrder();
 
   // Изменяем массив с добавками в кофе
   let p = 0;
-  if (ourCoffeeAdd != null){
+  if (ourCoffeeAdd != null) {
     k = 0;
     dopss.forEach(strok => {
       strok.forEach(na => {
-        if (siz == na){ p = k; }
-      })
+        if (siz == na) { p = k; }
+      });
       k++;
-    })
+    });
     ourCoffeeAdd[p] = siz;
-  }
-  else{
+  } else {
     ourCoffeeAdd.push(siz);
   }
 
   console.log(ourCoffeeAdd);
-  console.log(priceDopss)
+  console.log(priceDopss);
 
   let yourPrice = 0; // Расчет цены без учета кол-ва
   priceDopss.forEach(elem => {
     elem.forEach(el => {
       yourPrice += el;
-    })
-  })
+    });
+  });
+
   fixPrice = yourPrice;
-  console.log(fixPrice)
-  PriceOrderMade(1);
+  console.log(fixPrice);
+  PriceOrderMade(coffeeQuantity); // Передаем текущее количество порций
 }
+
+// Добавки
+//const doppsCoffee = (siz, j, i) => {
+  // Когда нажимаем добавить/отменить
+  //let k = 0;
+    //colorDopss[j].forEach(element => {
+      //if (k == i){//      //if (priceDopss[j][k] == realPriceDopss[j][k] || colorDopss[j][k] == "#AC8F64"){ // Отменяем если уже выбрано
+          //colorDopss[j][k] = "rgb(255, 255, 255)";
+          //priceDopss[j][k] = 0;
+          //if (j == 0){
+            //PikcherOnCofeSizeWhite[j][k] = "images/Pikcher.jpg";
+          //}
+        //}
+        //else{
+          //colorDopss[j][k] = "#AC8F64";
+          //priceDopss[j][k] = realPriceDopss[j][k];
+          //if (j == 0){
+            //PikcherOnCofeSizeWhite[j][k] = PikcherOnCofeSizeBlack[j][k];
+          //}
+
+        //}
+      //}
+      //else{
+        //colorDopss[j][k] = "rgb(255, 255, 255)";
+        //priceDopss[j][k] = 0;
+        //if (j == 0){
+          //PikcherOnCofeSizeWhite[j][k] = "images/Pikcher.jpg";
+        //}
+      //}
+      //k++;
+    //})
+    //showAllViborOrder();
+
+  // Изменяем массив с добавками в кофе
+  //let p = 0;
+  //if (ourCoffeeAdd != null){
+    //k = 0;
+    //dopss.forEach(strok => {
+      //strok.forEach(na => {
+        //if (siz == na){ p = k; }
+      //})
+      //k++;
+    //})
+    //ourCoffeeAdd[p] = siz;
+  //}
+  //else{
+    //ourCoffeeAdd.push(siz);
+  //}
+
+  //console.log(ourCoffeeAdd);
+  //console.log(priceDopss)
+
+  //let yourPrice = 0; // Расчет цены без учета кол-ва
+  //priceDopss.forEach(elem => {
+    //elem.forEach(el => {
+      //yourPrice += el;
+    //})
+  //})
+  //fixPrice = yourPrice;
+  //console.log(fixPrice)
+  //PriceOrderMade(1);
+//}
 showAllViborOrder();
 
 // Расчет чека по кол-ву кофе
 const PriceOrderMade = (c) => {
   if (c <= 0) { c = 0; }
-  let yourPrice = (priceCoffee + fixPrice) * c;
+  let yourPrice = (priceCoffee + fixPrice) * c; // Учитываем количество порций
   console.log(yourPrice);
   let f = "";
   f += `
@@ -231,6 +293,13 @@ const PriceOrderMade = (c) => {
 }
 PriceOrderMade(1);
 
+// Функция для изменения количества кофе
+const adjustCoffeeQuantity = (change) => {
+  coffeeQuantity += change;
+  if (coffeeQuantity < 1) coffeeQuantity = 1; // Не допускаем меньше 1
+  PriceOrderMade(coffeeQuantity);
+}
+
 // Добавление заказа в listOrder - localStorage 
 const addOrderInList = (yourPrice,c) => {
   if (c < 1){
@@ -241,7 +310,9 @@ const addOrderInList = (yourPrice,c) => {
     let check = false;
     listOrder.forEach(elem => {
       if (elem[0] == data.Name){
-        elem[4] += 1;
+        elem[4] += c; // Увеличиваем количество порций в заказе
+        elem[3] += yourPrice; // Увеличиваем общую цену заказа
+        //elem[4] += 1;
         check = true;
       }
     })
@@ -255,10 +326,21 @@ const addOrderInList = (yourPrice,c) => {
       listOrder.push(ordered);
     }
       updateocsl();
+      //updateTotalPrice();
       console.log(listOrder);
       location.reload(false); // Перезагрузка страницы
   }
 }
+
+// Функция для обновления итоговой цены
+const updateTotalPrice = () => {
+  let totalPrice = 0;
+  listOrder.forEach(lis => {
+    totalPrice += lis[3]; // Суммируем цены всех заказов
+  });
+  const finalPriceFromOrder = document.querySelector('.FinalPriceFromOrder');
+  finalPriceFromOrder.innerHTML = `<p class="total">Total:</p><p class="zena">${totalPrice}р</p>`;
+};
 
 // Открытие формы Order Status и Реализация добавления кофе в список заказов 
 silka.addEventListener("click", () => {   
@@ -300,6 +382,7 @@ const updateTask = () => {   // ИЗМЕНЯЕМ
             </div>`;
   })
   savedOrder.innerHTML = s2;
+
 
   // console.log(listOrder);
 

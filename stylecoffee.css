@@ -252,9 +252,10 @@ h2 a:hover{
     gap: 10px;
     margin-top: 10px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .CoffeYourOrder{
+    /*box-sizing: border-box;  Учитываем отступы и границы в ширине */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -262,7 +263,7 @@ h2 a:hover{
     box-shadow: 0px 3px 5px 3px;
     border-radius: 5px;
     padding-top: 5px;
-    padding-bottom: 5px;
+    margin-right: 20px; /* Добавляем внешний отступ справа */
 }
 .CoffeYourOrder img{
     width: 50px;
@@ -279,7 +280,7 @@ h2 a:hover{
     border-radius: 50%;
     background: rgb(255, 86, 86);
     width: 40px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .countisto p{
     margin-left: 15px;
@@ -289,8 +290,8 @@ h2 a:hover{
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 80%;
-    left: 120%;
+    top: 90%;
+    left: 70%;
 }
 .FinalPriceFromOrder p{
     font-size: 30px;
